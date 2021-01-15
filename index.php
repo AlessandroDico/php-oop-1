@@ -21,24 +21,44 @@ class Movie {
     }
 };
 
+// CREO UN PRIMO OGGETTO
 $firstFilm = new Movie('amici miei', '9', 'comico');
 
-$firstMovie = $firstFilm->title;
+$firstMovieTitle = $firstFilm->title;
 
 $firstMovieDirector = $firstFilm->director = 'Mario Monicelli';
 
 $firstMovieYear = $firstFilm->year = 1975;
 
-$firstGenre = $firstFilm->getGenre();
+$firstMovieGenre = $firstFilm->getGenre();
 
-echo($firstMovie);
+echo($firstMovieTitle);
 echo '<br>';
 echo($firstMovieDirector);
 echo '<br>';
 echo($firstMovieYear);
 echo '<br>';
-echo($firstGenre);
+echo($firstMovieGenre);
+echo '<br>';
 
 
+// CREO UN SECONDO OGGETTO
+$secondFilm = new Movie('interstellar', '8.5', 'fantascienza');
+
+$secondMovieTitle = $secondFilm->title;
+
+$secondMovieDirector = $secondFilm->director = 'Christopher Nolan';
+
+$secondMovieYear = $secondFilm->year = 2014;
+
+$secondMovieGenre = $secondFilm->getGenre();
+
+echo($secondMovieTitle);
+echo '<br>';
+echo ($secondMovieDirector);
+echo '<br>';
+echo ($secondMovieYear);
+echo '<br>';
+echo ($secondMovieGenre);
 
 ?>
