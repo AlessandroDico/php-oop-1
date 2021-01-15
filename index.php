@@ -61,6 +61,68 @@ $secondMovieGenre = $secondFilm->getGenre();
 // echo '<br>';
 // echo ($secondMovieGenre);
 
+
+class FirstMovieActors {
+    public $name;
+    public $lastname;
+    public $role;
+
+    function __construct($_lastname) {
+        $this->lastname = $_lastname;
+    }
+
+    public function getLastname() {
+        return $this->lastname;
+    }
+}
+
+$firstMainActor = new FirstMovieActors('Tognazzi');
+$firstMainActorName = $firstMainActor->name = 'Ugo';
+$firstMainActorLastname = $firstMainActor->getLastname();
+$firstMainActorRole = $firstMainActor->role = 'Raffaello Mascetti';
+
+$secondMainActor = new FirstMovieActors('Moschin');
+$secondMainActorName = $secondMainActor->name = 'Gastone';
+$secondMainActorLastname = $secondMainActor->getLastname();
+$secondMainActorRole = $secondMainActor->role = 'Rambaldo Melandri';
+
+$thirdMainActor = new FirstMovieActors('Noiret');
+$thirdMainActorName = $thirdMainActor->name = 'Philippe';
+$thirdMainActorLastname = $thirdMainActor->getLastname();
+$thirdMainActorRole = $thirdMainActor->role = 'Giorgio Perozzi';
+
+
+class SecondMovieActors {
+    public $name;
+    public $lastname;
+    public $role;
+
+    function __construct($_lastname) {
+        $this->lastname = $_lastname;
+    }
+
+    public function getLastname() {
+        return $this->lastname;
+    }
+}
+
+$firstMainActorT = new SecondMovieActors('McConaughey');
+$firstMainActorNameT = $firstMainActorT->name = 'Matthew';
+$firstMainActorLastnameT = $firstMainActorT->getLastname();
+$firstMainActorRoleT = $firstMainActorT->role = 'Joseph Cooper';
+
+$secondMainActorT = new SecondMovieActors('Hathaway');
+$secondMainActorNameT = $secondMainActorT->name = 'Anne';
+$secondMainActorLastnameT = $secondMainActorT->getLastname();
+$secondMainActorRoleT = $secondMainActorT->role = 'Amelia Brand';
+
+$thirdMainActorT = new SecondMovieActors('Jessica');
+$thirdMainActorNameT = $thirdMainActorT->name = 'Chastain';
+$thirdMainActorLastnameT = $thirdMainActorT->getLastname();
+$thirdMainActorRoleT = $thirdMainActorT->role = 'Murphy Cooper';
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -77,18 +139,82 @@ $secondMovieGenre = $secondFilm->getGenre();
             <div class="container">
                 <div class="card-container">
                     <div class="card">
-                        <h2>First Movie</h2>
-                        <p><?php echo $firstMovieTitle?></p>
-                        <p><?php echo $firstMovieDirector?></p>
-                        <p><?php echo $firstMovieYear?></p>
-                        <p><?php echo $firstMovieGenre?></p>
+                        <div class="card-left">
+                            <h2>First Movie</h2>
+                            <p>Title : <?php echo $firstMovieTitle?></p>
+                            <p>Director : <?php echo $firstMovieDirector?></p>
+                            <p>Year : <?php echo $firstMovieYear?></p>
+                            <p>Genre : <?php echo $firstMovieGenre?></p>
+                        </div>
+                        <div class="card-right">
+                            <h2>Actors</h2>
+                            <div class="firstActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $firstMainActorName?>
+                                        <?php echo $firstMainActorLastname?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $firstMainActorRole?></span>
+                            </div>
+                            <div class="secondActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $secondMainActorName?>
+                                        <?php echo $secondMainActorLastname?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $secondMainActorRole?></span>
+                            </div>
+                            <div class="thirdActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $thirdMainActorName?>
+                                        <?php echo $thirdMainActorLastname?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $thirdMainActorRole?></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="card">
-                        <h2>Second Movie</h2>
-                        <p><?php echo $secondMovieTitle?></p>
-                        <p><?php echo $secondMovieDirector?></p>
-                        <p><?php echo $secondMovieYear?></p>
-                        <p><?php echo $secondMovieGenre?></p>
+                        <div class="card-left">
+                            <h2>Second Movie</h2>
+                            <p>Title : <?php echo $secondMovieTitle?></p>
+                            <p>Director : <?php echo $secondMovieDirector?></p>
+                            <p>Year : <?php echo $secondMovieYear?></p>
+                            <p>Genre : <?php echo $secondMovieGenre?></p>
+                        </div>
+                        <div class="card-right">
+                            <h2>Actors</h2>
+                            <div class="firstActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $firstMainActorNameT?>
+                                        <?php echo $firstMainActorLastnameT?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $firstMainActorRoleT?></span>
+                            </div>
+                            <div class="secondActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $secondMainActorNameT?>
+                                        <?php echo $secondMainActorLastnameT?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $secondMainActorRoleT?></span>
+                            </div>
+                            <div class="thirdActor">
+                                <span>Name :
+                                    <span class="bold">
+                                        <?php echo $thirdMainActorNameT?>
+                                        <?php echo $thirdMainActorLastnameT?>
+                                    </span>
+                                </span>
+                                <span> nel ruolo di <?php echo $thirdMainActorRoleT?></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
