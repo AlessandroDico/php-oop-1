@@ -1,0 +1,16 @@
+body {
+    background-color: cadetblue;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+}
